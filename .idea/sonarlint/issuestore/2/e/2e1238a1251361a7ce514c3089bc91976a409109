@@ -1,0 +1,12 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬÷¥Îýÿÿÿÿ
+m
+java:S3008"RRename this field "DB_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í»Œñþÿÿÿÿ
+l
+java:S3008"QRename this field "DB_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾É•³þÿÿÿÿ
+h
+java:S3008"RRename this field "DB_USER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÎ‘ö
+q
+java:S3008"VRename this field "DB_PASSWORD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ûÿÙþÿÿÿÿ
+O
+java:S1118":Add a private constructor to hide the implicit public one.(¯»ŽW
