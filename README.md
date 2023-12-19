@@ -1,4 +1,4 @@
-# :books: LibraryWithCRUDInMind
+# :books: BooksLibraryWithCRUDInMind
 
 ## _with create, read, update, delete operations and several flavors of them_
 
