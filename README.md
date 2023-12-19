@@ -196,8 +196,6 @@ _Repo metadata_
 
 [![GitHub tag](https://img.shields.io/github/tag/valentinsoare/LibraryWithCRUDInMind?include_prereleases=&sort=semver&color=blue)](https://github.com/valentinsoare/LibraryWithCRUDInMind/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
-[![issues - LibraryWithCRUDInMind](https://img.shields.io/github/issues/valentinsoare/LibraryWithCRUDInMind)](https://github.com/valentinsoare/LibraryWithCRUDInMind/issues)
-
 
 ## License
 
