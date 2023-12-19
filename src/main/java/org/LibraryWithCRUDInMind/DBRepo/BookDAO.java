@@ -38,8 +38,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
 //
 //        return Optional.empty();
 //    }
-
-
     /**
      * This is a get method which in turn is returning an optional in order to get rid of null pointer exception
      * if it is the case. We search an item, which is a book, by id in the databsase.
@@ -119,8 +117,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
             }
         };
     }
-
-
     /**
      *
      * With this we get all the records from the Book class.
@@ -132,7 +128,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
 
         return qt.queryForAllToAList(sqlQueryForASpecificBookById);
     }
-
 //    @Override
 //    public Deque<Book> findAll() {
 //        Deque<Book> books = new LinkedList<>();
@@ -161,7 +156,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
 //
 //       return books;
 //    }
-
     /**
      * We have a table and with this we extract the number of records from a table.
      */
@@ -174,8 +168,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
 
         return  template.countNumberOfRecordsFromATable( queryForReplacement);
     }
-
-
 //    @Override
 //    public int numberOfRecordsPerTable(String nameOfTheTable) throws SQLException {
 //        String nrOfRecords = "SELECT COUNT(*) AS numberOfRecords FROM $tableName";
@@ -198,7 +190,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
 ////
 //        return -1;
 //    }
-
     /**
      * We check if a table exists in the database.
      */
@@ -209,8 +200,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
 
         return qt.toCheckIfAnElementExist(new String[]{nameOfTheTable}, checkTableIfExists);
     }
-
-
 //    @Override
 //    public boolean checkIfTableExists(String nameOfTheTable) {
 //        String checkTableIfExists = "SHOW TABLES LIKE ?";
@@ -229,7 +218,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
 //
 //        return false;
 //    }
-
     /**
      * Check if an item exists using all of its attributes except idm the synthetic one.
      */
@@ -241,8 +229,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
         QueryTemplate<Book> template = accessToMethods();
         return template.toCheckIfAnElementExist(new String[]{title, author}, sqlQueryForCheckingExistence);
     }
-
-
 //    @Override
 //    public boolean checkIfElementExists(String title, String author) {
 //        String sqlQueryForCheckingExistence =
@@ -266,7 +252,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
 //
 //        return false;
 //    }
-
     /**
      * We have a list of elements, and we add them in the databsase.
      */
@@ -282,7 +267,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
         int[] ints = template.implementingCreateAllOrUpdateAll(booksAsAttributes, insertion, true);
         return (ints.length == elements.size()) ? ints : new int[] {};
     }
-
 //    @Override
 //    public int[] createAll(List<Book> books) {
 //        String insertion = "INSERT INTO BOOK (TITLE, AUTHOR) VALUES (?, ?)";
@@ -321,7 +305,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
 //
 //        return new int[] {};
 //    }
-
     /**
      * Add only an item in DB.
      */
@@ -333,7 +316,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
         QueryTemplate<Book> template = accessToMethods();
         return template.implementCreateAndUpdateElement(elements, insertARecord, true);
     }
-
     @Override
     public boolean update(Book book) {
         String sqlForUpdatingElement = "UPDATE BOOK SET BOOK.title = ?, BOOK.author = ? where BOOK.id = ?";
@@ -342,7 +324,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
         QueryTemplate<Book> template = accessToMethods();
         return template.implementCreateAndUpdateElement(elements, sqlForUpdatingElement, false);
     }
-
     /**
      * We create elements with exactly the values we want for them attributes and then we update the DB. Like if we need the book
      * with id 5 to be updated, we made an oobject of book with id of 5 and our attributes values and then we push this element
@@ -362,7 +343,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
         int[] ints = t.implementingCreateAllOrUpdateAll(booksAsAttributes, updateAll, false);
         return (ints.length == books.size()) ? ints : new int[] {};
     }
-
     //    @Override
 //    public int[] updateAll(List<Book> books, long[] ids) {
 //        String updateAll = "UPDATE BOOK SET BOOK.title = ?, BOOK.author = ? where BOOK.id = ?";
@@ -405,8 +385,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
 //
 //        return new int[] {};
 //    }
-
-
     /**
      * We delete an item by id from the supplied table.
      */
@@ -418,8 +396,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
 
         return template.implementDelete(id, nameOfTable, recordDeletion);
     }
-
-
 //    @Override
 //    public int delete(int id, String nameOfTable) {
 //        String recordDeletion = "DELETE from ? where ?.id = ?";
@@ -458,7 +434,6 @@ public class BookDAO extends ConnectionToDb implements Dao<Book> {
 //
 //        return 0;
 //    }
-
     /**
      * Just for the fun of it this deleteAll method will remain like this, in a raw format, without anything in
      * the template pattern. We are going into the wild with this :)).

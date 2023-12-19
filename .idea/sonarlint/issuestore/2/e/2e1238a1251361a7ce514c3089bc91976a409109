@@ -6,7 +6,7 @@ l
 java:S3008"QRename this field "DB_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾É•³þÿÿÿÿ
 h
 java:S3008"RRename this field "DB_USER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÎ‘ö
-q
-java:S3008"VRename this field "DB_PASSWORD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ûÿÙþÿÿÿÿ
+x
+java:S3008"VRename this field "DB_PASSWORD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÆûøÿÿÿÿÿ8ÁµýŠÈ1
 O
 java:S1118":Add a private constructor to hide the implicit public one.(¯»ŽW

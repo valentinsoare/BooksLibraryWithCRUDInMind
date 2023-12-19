@@ -29,7 +29,6 @@ public abstract class QueryTemplate<T> extends ConnectionToDb {
 
         return items;
     }
-
     public Optional<T> queryForAnElement(String sql, long id) {
         try (Connection connection = ConnectionToDb.getAlreadyOpenConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -46,7 +45,6 @@ public abstract class QueryTemplate<T> extends ConnectionToDb {
 
         return Optional.empty();
     }
-
     public boolean toCheckIfAnElementExist(String[] args, String sql) {
         try (Connection connection = ConnectionToDb.getAlreadyOpenConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {;
@@ -67,7 +65,6 @@ public abstract class QueryTemplate<T> extends ConnectionToDb {
 
         return false;
     }
-
     public int countNumberOfRecordsFromATable(String sql) {
         Connection connection = ConnectionToDb.getAlreadyOpenConnection();
 
@@ -84,7 +81,6 @@ public abstract class QueryTemplate<T> extends ConnectionToDb {
 
         return -1;
     }
-
     public boolean implementCreateAndUpdateElement(String[] attributes, String sql, boolean toCreate) {
         Connection connection = ConnectionToDb.getAlreadyOpenConnection();
 
@@ -115,7 +111,6 @@ public abstract class QueryTemplate<T> extends ConnectionToDb {
 
         return false;
     }
-
     public int[] implementingCreateAllOrUpdateAll(List<String[]> books, String sql, boolean ifCreateAll) {
         Connection connection = ConnectionToDb.getAlreadyOpenConnection();
 
@@ -147,7 +142,6 @@ public abstract class QueryTemplate<T> extends ConnectionToDb {
 
         return new int[]{};
     }
-
     public int implementDelete(long id, String nameOfTheTable, String sql) {
         Connection connection = ConnectionToDb.getAlreadyOpenConnection();
 

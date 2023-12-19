@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Defined the methods in order for them to be implemented/override in the classes
+ * Defined the methods in order for them to be override in the classes
  * that implements this interface.
  */
 public interface Dao<T> {

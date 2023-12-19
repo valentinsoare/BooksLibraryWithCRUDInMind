@@ -12,7 +12,7 @@ public abstract class ConnectionToDb {
     private static String DB_NAME = "library_db";
     private static String DB_URL = "jdbc:mysql://localhost:3306/" + DB_NAME;
     private static String DB_USER = "root";
-    private static String DB_PASSWORD = "valisoare191987";
+    private static String DB_PASSWORD = "xxxxxxxxxxxx";
     private static Connection connection;
 
     /**
