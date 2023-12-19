@@ -57,8 +57,7 @@ where we need the connection.
 
 <br>
 
-:point_right: With BookDAO we implement those CRUD operations, naive way is the first version which it's difficult to make tests for  
-and the second one where is i followed design pattersn and SOLID principles in order to have a better build. 
+:point_right: With BookDAO we implement those CRUD operations, naive way is the first version which it's difficult to make tests for and the second one where I followed design pattern and SOLID principles in order to have a better build. 
 With this class we extend the generic QueryTemplate one with an anonymous class.
 
 ![BookDAO][5]
